@@ -1,0 +1,16 @@
+To generate premise tuples follow the following steps
+
+If you haven't already downloaded the requirements, go back to the previous folder
+chmod +x download_requirements.sh
+./download_requirements
+
+Once you have all the requirements downloaded and installed, proceed with the next steps
+
+To setup VQA questions in the format required by SPICE
+python vqa_to_spice.py OpenEnded_mscoco_{train2014, val2014}_questions.json spice_input.json
+
+Run SPICE on the output of previous step
+java -Xmx8G -jar SPICE-1.0/spice-*.jar spice_input.json -out spice_output.json -detailed
+
+Run the process output script
+python process_output.py spice_output.json vqa_oe_tuples_filtered.json

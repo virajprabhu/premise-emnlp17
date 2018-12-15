@@ -1,0 +1,28 @@
+#False Premise Detection (FPD) model
+Code for fpd  model described in: 
+  
+The Promise of Premise: Harnessing Question Premises in Visual Question Answering (EMNLP 2017) – https://arxiv.org/abs/1705.00601
+
+Based on [Deeper LSTM+ normalized CNN for Visual Question Answering](https://github.com/VT-vision-lab/VQA_LSTM_CNN)
+
+###Requirements
+- torchfile package for evaluating accuracy ``` pip install torchfile ```
+
+###Preprocessing
+Generate train and val datasets using prepro.py, e.g.:
+
+```python prepro.py --input_train_json data_train.json --input_test_json data_test.json --output_h5 vqa_bin.h5 --output_json vqa_bin.json```
+
+(Data provided in ```data`` directory)
+
+###Training the model
+Train the model with generated h5/json files:
+
+```th train.lua -input_ques_h5 vqa_bin.h5 -input_json vqa_bin.json```
+
+###Evaluating the model
+Get normalized accuracy using the python script:
+
+```python eval_valacc.py predslstm_iter1000.t7```
+
+Contact Aroma Mahendru (maroma@vt.edu) in case of any questions or clarification.

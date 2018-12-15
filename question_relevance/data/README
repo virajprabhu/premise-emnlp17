@@ -1,0 +1,9 @@
+# Dataset + Dataset Generation Code
+
+If you are only looking to use / browse the data, look under train/test:
+* QRPE train split
+* QRPE test split 
+* QRPE train split – only first order premises
+* QRPE train split – only second order premises
+* QRPE test split – only first order premises
+* QRPE test split – only second order premises

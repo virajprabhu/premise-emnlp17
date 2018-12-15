@@ -1,0 +1,3 @@
+[submodule "question_relevance/data/generate_data/coco"]
+	path = question_relevance/data/generate_data/coco
+	url = https://github.com/pdollar/coco

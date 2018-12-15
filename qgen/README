@@ -1,0 +1,9 @@
+Start question generation
+Note: The following script launches multiple batches as screen sessions to run in the background. Make appropriate changes based on available computation resources. 
+chmod +x launch_qgen_procs.sh
+./launch_qgen_procs
+
+Once the batches have completed run the following to concatenate generated questions to a single file
+python concat.py
+
+The final output can be found in the generated_questions folder

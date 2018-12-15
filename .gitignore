@@ -1,0 +1,3 @@
+*.bin
+sftp-config.json
+question_relevance/models/relevance_prediction/
